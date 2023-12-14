@@ -1,0 +1,13 @@
+Assignment 6:
+
+1. Explain difference in flow control js and other language like python, c with example code.
+
+    Like every programming language JS also has a call stack to execute the code. If there a method call is present the method will be added to the top of the stack. Once the top of the stack's piece of code is executed it will pop it out and start with the next method to execute. This process goes on until the stack is empty.
+
+    When the stack is empty the execution will stop. To add on, The global execution context(GEC) in javascript will start the execution with code. If the code has method calls, then that method will be added to the call stack. and the loop I mentioned above will take care of execution until the stack is empty.
+
+    Javascript is a single-threaded language which means it can execute one line at a time, whereas most of the popular languages are multi-threaded. The javascript overcomes this disadvantage with the help of an event loop.
+
+2. Explain nodejs event loop. 
+
+    Javascript uses an event loop to execute callback functions in the normal flow. In the normal execution if a code triggers a method like setTimeout or setInterval. For this method, we need a timer to wait for the mentioned time in the scenario of setTimeout but the js doesn't provide a timer whereas the browser provides us many things where the timer is one of the things. The JS will continue its execution if there is a method that needs the help of a timer that will be redirected to the browser to take care therefore the JS will continue its execution. Once the execution is completed the event in the queue needs to be sifted back to the call stack. this operation will be taken care of by the event loop which will continuously check whether the call stack is empty or not. If the call stack is empty the event loop will push events from the call back queue or task queue to the call stack for its execution. For some callbacks that are triggered by promises or mutation observer APIs will be stacked in the microtask queue. this microstack will get higher priority than the callback queue or task queue. The event loop will check for the event in the microtask queue if there is no event then it will check the callback queue for events.
