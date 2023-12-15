@@ -1,0 +1,29 @@
+1. Explain difference b/w callback, promise and async await with example code.
+
+    Callback:
+
+    Callback is nothing but a function that is passed as a parameter to another function. The function passed as a parameter is called the callback function. The function scope will be within the function which has it as a param. The callback function call can be anywhere inside the higher-order function. Callback makes the Javascript asynchronised with the help of the event loop.
+
+    Promises:
+
+    The Promise object represents the eventual completion or failure of an asynchronous operation and its resulting value. There are 3 states of promise they are
+
+    pending state: The promise is not completed and still in a pending state in simple words not executed
+
+    fulfilled state: The promise is executed and completed successfully as expected.
+
+    rejected state: The promise ended in an error and got rejected.
+
+    Even if a promise ends up in a reject state it will stop the execution of the program if we don’t handle it with a proper catch block. However, this behavior will differ based on the environment.
+
+    Async and Await:
+
+    Async is a keyword used to define a function as asynchronized function. The async and await is a way to handle the promise. The await can only be used inside an async function. The await before a promise will suspend the current method in the call stack and will be sifted back to the call stack once the promise is resolved therefore the call stack will not be blocked. The Async method always returns a promise object even if we have added a return statement with some value like a string or number. The value will be wrapped inside a promise.
+
+2. Show the use of promisify with example code.
+
+    Promisify method makes a synchronized function into a synchronized. This is achieved by converting the function into a promise. This will not only convert this to a synchronized function but also return a promise object by which we can access the methods in the promise class.
+
+3. Create two functions add (a,b) and multiply (a,b). Call add, then use the result of the add function to calculate the product with 10. Using all four ways: callback, promise, async-await and convert callback to promise using promisify.
+
+
