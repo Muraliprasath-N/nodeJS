@@ -1,5 +1,10 @@
-var a;
-console.log("Program started");
-console.log("value of a is", a);
-a = 12;
-console.log("value of a is ", a);
+function x() {
+    let a = 'alive';
+    function y() {
+        console.log(a);
+    }
+    return y;
+}
+
+var z = x();
+z();

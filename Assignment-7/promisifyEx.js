@@ -16,3 +16,4 @@ addPromise(2, 3)
     .then((product) => {
         console.log('Promisify Result:', product);
     });
+ 
