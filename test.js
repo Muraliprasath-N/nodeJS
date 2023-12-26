@@ -1,10 +1,8 @@
-function x() {
-    let a = 'alive';
-    function y() {
-        console.log(a);
+const obj = {
+    name: 'Murali',
+    getName: function () {
+        console.log(this.name);
     }
-    return y;
 }
 
-var z = x();
-z();
+obj.getName();
