@@ -1,6 +1,7 @@
 const promise = new Promise((resolve) => {
         const url = "https://www.google.com/";
     fetch(url).then((response) => {
+        console.log('fetch triggeres')
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -20,3 +21,5 @@ async function displayInConsole() {
 }
 
 displayInConsole();
+
+module.exports = displayInConsole;

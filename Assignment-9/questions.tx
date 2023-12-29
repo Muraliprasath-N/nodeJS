@@ -1,0 +1,20 @@
+Assignment 9:
+1. Create a event for several key presses, mouse curser movement, and handle that events.
+
+2. Explain difference ways in which child process can be created and difference b/w them.
+
+    spawn(): 
+        Used to launch a new process with a specified command. It returns a ChildProcess object that allows communication with the spawned process via streams.
+
+    exec(): 
+        Executes a command in a shell, allowing you to execute shell commands. It also returns a ChildProcess object and provides buffers containing the command output.
+
+    execFile(): 
+        Similar to exec(), but it directly executes a file instead of a command within a shell. It provides better control over command arguments and options.
+
+    fork(): 
+        Specifically designed for running Node.js scripts as child processes. It creates a new Node.js process, allowing communication between the parent and child processes through messaging.
+
+    The main differences lie in their usage scenarios, handling of input/output, execution environments, and control over communication with the child processes.
+
+3. Create a function which executes linux command (eg: ifconfig) from nodejs and prints the result in console.In Node.js, you can create child processes using different methods such as spawn, exec, execFile, and fork. Each method has its own purpose and behavior:

@@ -16,7 +16,9 @@ const fileRead = (file) => {
 fileRead('file1.txt')
     .then(data => {
         data1 = data;
-        return fileRead('file2.txt');
+        fileRead('file2.txt').then(() => {
+            file.then
+        });
     })
     .then(data => {
         data2 = data;

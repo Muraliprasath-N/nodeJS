@@ -9,3 +9,5 @@ function displayWithDeplay(message) {
 }
 
 displayMessage(displayWithDeplay);
+
+module.exports = displayMessage;
