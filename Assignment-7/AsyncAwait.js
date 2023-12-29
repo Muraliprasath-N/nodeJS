@@ -1,25 +1,34 @@
-const promise = new Promise((resolve) => {
+function fetchData() {
+    return new Promise((resolve, reject) => {
         const url = "https://www.google.com/";
-    fetch(url).then((response) => {
-        console.log('fetch triggeres')
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.text();
-    })
-    .then((data) => {
-        resolve(data);
-    })
-    .catch((error) => {
-        reject(error);
-    });;
-});
-
-async function displayInConsole() {
-    const data = await promise;
-    console.log(data);
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then((data) => {
+                resolve(data);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+    });
 }
 
-displayInConsole();
+async function displayInConsole() {
+    try {
+        const data = await fetchData();
+        console.log(data);
+        return data; 
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
 
-module.exports = displayInConsole;
+module.exports = {
+    fetchData,
+    displayInConsole,
+};
