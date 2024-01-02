@@ -3,7 +3,7 @@ const exec = require('child_process').exec
 function LinuxCommand(command) {
     exec(command, (err, stdout, stderr) => {
         if (err) {
-            console.error(err);
+            err);
             return;
         }
         if (stdout) {
@@ -15,3 +15,5 @@ function LinuxCommand(command) {
 }
 
 LinuxCommand('ls');
+
+module.exports = LinuxCommand;

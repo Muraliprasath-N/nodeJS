@@ -5,7 +5,10 @@ const nestedObj = {
     key2: 'value2',
     key3: {
         keyA: 'valueA',
-        keyB: 'valueB'
+        keyB: 'valueB',
+        s: {
+            "fsfasf": 'asdfa'
+        }
     }
 };
 
@@ -23,3 +26,12 @@ function dsf(obj) {
 }
 
 console.log(dsf(nestedObj));
+
+const person = class {
+
+}
+
+class person {
+
+}
+
