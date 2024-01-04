@@ -12,27 +12,38 @@
 // console.log(deleted1);
 
 
+// class Person {
+//   constructor() {
+//     this.name = 'murali';
+//     // this.displayName = () => {
+//     //   console.log(this.name);
+//     // }
+//   }
+// }
+
+// Person.prototype.displayName = () => {
+//   console.log(this.name);
+// }
+
+// const person = new Person();
+// const func = person.displayName.bind(person);
+// console.log(func);
+// // console.log(Person.prototype);
+
 class Person {
-  constructor() {
-    this.name = 'murali';
-    this.displayName = () => {
-      console.log(this.name);
-    }
+  constructor(name) {
+    this.name = name;
   }
 }
 
-// Person.prototype.displayName = 
-
-for (let i = 0; i < 5; i++){
-  var index = i;
-  setTimeout((index) => {
-    console.log(index);
-  }, index * 1000, index);
+function boundDisplayName() {
+  Person.prototype.displayName = () => {
+    console.log(this.name);
+  };
+  this.displayName();
 }
 
-const person = new Person();
-person.displayName();
-// console.log(Person.prototype);
+const person = new Person("murali");
+const func = boundDisplayName.bind(person);
 
-
-
+// func();
