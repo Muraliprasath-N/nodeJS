@@ -7,12 +7,8 @@ client.on("connect", function () {
 
   client.subscribe("topic1", function (err) {
     if (err) console.error(err);
-    else console.log("Subscribed to topic");
+    else console.log("Subscribed to topic1");
   });
-    
-  setInterval(() => {
-    client.publish("topic2", "Hello from client2");
-  }, 2000);
 });
 
 client.on("message", function (topic, message) {

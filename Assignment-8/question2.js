@@ -44,6 +44,7 @@ function boundDisplayName() {
 }
 
 const person = new Person("murali");
-const func = boundDisplayName.bind(person);
+// const func = boundDisplayName.bind(person);
 
 // func();
+boundDisplayName();
