@@ -1,0 +1,61 @@
+{
+    "imsi"=>"310240110633120",
+    "mode"=>"central",
+    "fwVer"=>"3.1.2.29",
+    "iccid"=>"8901240114206331209",
+    "battery"=>60,
+    "message"=>"Hub shutdown via button sequence",
+    "nodeList"=>[
+        865,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "heartBeat"=>"2024-02-08T12:12:34.715Z",
+    "HWSerialNo"=>"704a0ee5a8e2-0c1899d75d54cc79",
+    "add_device"=>{
+        "10"=>[
+            "motion_sensor",
+            "600-3-141",
+            "0",
+            "Warning:Network is S2 capable, but the device isincluded as Non-secure",
+            ""
+        ],
+        "code"=>-1,
+        "status"=>"timedout",
+        "message"=>"Failed to scan slave node and add node"
+    },
+    "board_type"=>"V4",
+    "signal_query"=>{
+        "csq"=>"99,99",
+        "wifi_ss"=>-75,
+        "wifi_ssid"=>"rently",
+        "curr_conn_type"=>"wifi"
+    },
+    "remove_device"=>{
+        "0"=>"unknown_node_removal",
+        "8"=>"delete",
+        "code"=>-1,
+        "status"=>"timedout",
+        "message"=>"Failed to scan slave node and remove node"
+    },
+    "readyForBleCmds"=>true,
+    "signal_strength"=>"-57",
+    "scanDeviceReport"=>[
+        "22:06:15:B0:F7:FF",
+        -93,
+        0,
+        1,
+        247
+    ],
+    "powerNotification"=>[
+        "0x01",
+        100
+    ],
+    "alarm_triggered_at"=>"2024-02-02T12:29:24Z",
+    "alarm_triggered_by"=>"12000208 - monitoring triggered - Home monitoring alarm triggered via trigger"
+}

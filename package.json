@@ -198,6 +198,7 @@
     "qs": "^6.5.3",
     "querystring": "^0.2.1",
     "randombytes": "^2.1.0",
+    "react-native-device-info": "^10.12.0",
     "readable-stream": "^2.3.8",
     "readdirp": "^3.6.0",
     "regenerator-runtime": "^0.14.1",
